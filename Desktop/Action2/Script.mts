@@ -12,7 +12,6 @@ Call Fun_Balance(balance)
 Call Fun_ITF(itf)
 Call Fun_regimen(regimen)
 
-
 Function Fun_Balance(balance)
 		
 	If balance = "Si" Then
@@ -22,7 +21,6 @@ Function Fun_Balance(balance)
 	End If
 	
 End Function
-
 Function Fun_ITF(itf)
 
 	If itf = "Si" Then
@@ -33,8 +31,6 @@ Function Fun_ITF(itf)
 	End If
 	
 End Function
- 
-
 Function Fun_regimen(regimen)
 	
 	Select Case regimen
@@ -48,7 +44,6 @@ Function Fun_regimen(regimen)
 	End Select
 	
 End Function
-
 Function Fun_MostrarMenu 
 	For Iterator = 1 To 15 Step 1
 		Set shell = CreateObject("Wscript.Shell")

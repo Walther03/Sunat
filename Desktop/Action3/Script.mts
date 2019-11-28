@@ -10,7 +10,7 @@ num_participantes	=  2
 Call Fun_Contrato(contrato)
 Call Fun_Agregar(AgregarContrato)
 Call Fun_NuevoParticipador(num_participantes)
-
+Call Fun_MostrarMenu()
 
 Function Fun_Contrato(contrato)
 	
@@ -23,7 +23,6 @@ Function Fun_Contrato(contrato)
 	End If
 	
 End Function
-
 Function Fun_Agregar(AgregarContrato)
 
 	If AgregarContrato = "Si" Then
@@ -34,10 +33,9 @@ Function Fun_Agregar(AgregarContrato)
 	End If
 		
 End Function
-
- Function Fun_NuevoParticipador(num_participantes) 
+Function Fun_NuevoParticipador(num_participantes) 
  
- 	For Iterator = 1 To 100 Step 1
+ 	For Iterator = 1 To 10 Step 1
  	
  		tipodoc			= "DNI"
  		numdoc 			= 44394190
@@ -63,3 +61,9 @@ End Function
  	JavaWindow("Sistema Integrador v1").JavaButton("Cancelar").Click
  End Function
  
+ Function Fun_MostrarMenu 
+	For Iterator = 1 To 15 Step 1
+		Set shell = CreateObject("Wscript.Shell")
+			shell.SendKeys "{PGUP}"
+	Next
+End Function
