@@ -1,9 +1,10 @@
 ﻿JavaWindow("Sistema Integrador v1").InsightObject("Pestaña_Exoneracion").Click
 
 
-exoneracion 		= "Si"
+exoneracion 		= "No"
 inafecta 			= "No"
 donacion 			= "Si"
+tipodon 			= "3"
 convenio 			= "Si"
 moneda_extranjera 	= "Si"
 tipo_moneda			= "Nacional"
@@ -14,7 +15,7 @@ If exoneracion = "No" Then
 	Call Fun_Inafecta(exoneracion)
 	
 	If inafecta = "No" Then
-		Call Fun_Donacion(donacion)
+		Call Fun_Donacion(donacion,tipodon)
 		Call Fun_Convenio(convenio,moneda_extranjera,tipo_moneda)
 		Call Fun_Beneficios(beneficio)
 	End If
@@ -55,14 +56,48 @@ Function Fun_Inafecta(inafecta)
 	
 	
 End Function
-Function Fun_Donacion(donacion)
+Function Fun_Donacion(donacion,tipodon)
 	
 	If donacion = "Si" Then
 		JavaWindow("Sistema Integrador v1").JavaTab("Complete").JavaTab("Paso 1:").JavaTab("Formulario Virtual N°").JavaRadioButton("Don_Si").Set
+		For Iterator = 1 To 15 Step 1
+			Set shell = CreateObject("Wscript.Shell")
+				shell.SendKeys "{PGDN}"
+		Next
 		JavaWindow("Sistema Integrador v1").InsightObject("Don_Txt227").Click
 		
+		
+		For Iterator = 1 To 2 Step 1
+		
+		
 		JavaWindow("Sistema Integrador v1").JavaButton("Don_Agregar").Click
-		JavaWindow("Sistema Integrador v1").JavaList("Don_Registro de Detalle de").Select "#0"
+				
+		JavaWindow("Sistema Integrador v1").InsightObject("Don_cmb_Tipo").Click
+		
+		Select Case tipodon
+			
+			Case "1"
+				JavaWindow("Sistema Integrador v1").InsightObject("Don_Cmb_#1").Click
+
+			
+			Case "2"
+				JavaWindow("Sistema Integrador v1").InsightObject("Don_Cmb_#2").Click
+
+			Case "3"
+				JavaWindow("Sistema Integrador v1").InsightObject("Don_Cmb_#3").Click
+
+			Case "4"
+				JavaWindow("Sistema Integrador v1").InsightObject("Don_Cmb_#4").Click
+
+			Case "5"
+				JavaWindow("Sistema Integrador v1").InsightObject("Don_Cmb_#5").Click
+
+			Case "7"
+				JavaWindow("Sistema Integrador v1").InsightObject("Don_Cmb_#6").Click
+
+		End Select
+		
+		
 		JavaWindow("Sistema Integrador v1").JavaList("Don_¿Está exonerado totalmente").Select "#2"
 		JavaWindow("Sistema Integrador v1").JavaEdit("Don_Tipo de Documento del").Set 10404266417
 		JavaWindow("Sistema Integrador v1").InsightObject("Don_Calendario").Click
@@ -71,8 +106,11 @@ Function Fun_Donacion(donacion)
 			shell.SendKeys "{ENTER}"
 		
 		wait 2
-		JavaWindow("Sistema Integrador v1").JavaEdit("Don_Tabla sin contenido").Set 20
+		JavaWindow("Sistema Integrador v1").InsightObject("Don_Txtmonto").Type 20
+
 		JavaWindow("Sistema Integrador v1").JavaButton("Don_Guardar").Click
+		
+		Next
 		
 		JavaWindow("Sistema Integrador v1").JavaButton("Don_Cancelar").Click
 
@@ -135,4 +173,12 @@ Function Fun_Beneficios(beneficio)
 	
 End Function
 		
+Function Fun_MostrarMenu()
+	For Iterator = 1 To 15 Step 1
+		Set shell = CreateObject("Wscript.Shell")
+			shell.SendKeys "{PGUP}"
+	Next
+End Function
+
+
 		
