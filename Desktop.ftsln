@@ -2,9 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 # SharpDevelop 4.1.3.0-UFT_14
-Project("") = "Sunat-Desktop", "Sunat-Desktop\Test.tsp", "BADE96C8-112E-45A2-B86D-4BC96EC50408"
+Project("") = "Desktop", "Desktop\Test.tsp", "051F596A-12D8-44A7-813B-73303124F18C"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = C:\Users\HP\Desktop\Desktop-UFT\Sunat-Desktop\Test.tsp
+		PathInformation = C:\Users\HP\Desktop\Desktop-UFT\Desktop\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 		BaselineId = 
@@ -16,9 +16,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		BADE96C8-112E-45A2-B86D-4BC96EC50408.Debug|Any CPU.Build.0 = Debug|Any CPU
-		BADE96C8-112E-45A2-B86D-4BC96EC50408.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		BADE96C8-112E-45A2-B86D-4BC96EC50408.Release|Any CPU.Build.0 = Release|Any CPU
-		BADE96C8-112E-45A2-B86D-4BC96EC50408.Release|Any CPU.ActiveCfg = Release|Any CPU
+		051F596A-12D8-44A7-813B-73303124F18C.Debug|Any CPU.Build.0 = Debug|Any CPU
+		051F596A-12D8-44A7-813B-73303124F18C.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		051F596A-12D8-44A7-813B-73303124F18C.Release|Any CPU.Build.0 = Release|Any CPU
+		051F596A-12D8-44A7-813B-73303124F18C.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
