@@ -1,6 +1,5 @@
 ﻿JavaWindow("Sistema Integrador v1").InsightObject("Pestaña_Exoneracion").Click
 
-
 exoneracion 		= "No"
 inafecta 			= "No"
 donacion 			= "Si"
