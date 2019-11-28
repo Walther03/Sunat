@@ -9,7 +9,6 @@ moneda_extranjera 	= "Si"
 tipo_moneda			= "Nacional"
 beneficio 			= "Si"
 
-
 Call Fun_Exoneracion(exoneracion)
 If exoneracion = "No" Then
 	Call Fun_Inafecta(exoneracion)
