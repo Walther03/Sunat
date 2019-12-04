@@ -21,6 +21,7 @@ If exoneracion = "No" Then
 	
 End If
 
+Call Fun_MostrarMenu()
 
 Function Fun_Exoneracion(exoneracion)
 	
@@ -156,7 +157,6 @@ Function Fun_Convenio(convenio,moneda_extranjera,tipo_moneda)
 	End If
 	
 End Function
-
 Function Fun_Beneficios(beneficio)
 	
 	If beneficio = "Si" Then
@@ -164,20 +164,22 @@ Function Fun_Beneficios(beneficio)
 		JavaWindow("Sistema Integrador v1").JavaTab("Complete").JavaTab("Paso 1:").JavaTab("Formulario Virtual N°").JavaRadioButton("Ben_Si").Set
 		JavaWindow("Sistema Integrador v1").JavaTab("Complete").JavaTab("Paso 1:").JavaTab("Formulario Virtual N°").JavaList("Ben_Cmb_199").Select "#3"
 		JavaWindow("Sistema Integrador v1").JavaTab("Complete").JavaTab("Paso 1:").JavaTab("Formulario Virtual N°").JavaEdit("Ben_201").Set "Especifique"
-
+		JavaWindow("Sistema Integrador v1").JavaTab("Complete").JavaTab("Paso 1:").JavaTab("Formulario Virtual N°").JavaRadioButton("Ben_Si").Set
 	Else
 		JavaWindow("Sistema Integrador v1").JavaTab("Complete").JavaTab("Paso 1:").JavaTab("Formulario Virtual N°").JavaRadioButton("Ben_No").Set
 
 	End If
 	
-End Function
-		
+End Function	
 Function Fun_MostrarMenu()
+	
 	For Iterator = 1 To 15 Step 1
 		Set shell = CreateObject("Wscript.Shell")
 			shell.SendKeys "{PGUP}"
 	Next
 End Function
+
+
 
 
 		

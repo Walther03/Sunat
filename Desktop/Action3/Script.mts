@@ -1,4 +1,6 @@
-﻿JavaWindow("Sistema Integrador v1").InsightObject("Pestaña_Contrato").Click
+﻿
+
+JavaWindow("Sistema Integrador v1").InsightObject("Pestaña_Contrato").Click
 
 Dim contrato , AgregarContrato ,Des_contrato , num_participantes 
 contrato 			= "Si"
@@ -11,6 +13,12 @@ Call Fun_Contrato(contrato)
 Call Fun_Agregar(AgregarContrato)
 Call Fun_NuevoParticipador(num_participantes)
 Call Fun_MostrarMenu()
+
+
+
+
+
+
 
 Function Fun_Contrato(contrato)
 	
@@ -35,9 +43,9 @@ Function Fun_Agregar(AgregarContrato)
 End Function
 Function Fun_NuevoParticipador(num_participantes) 
  
- 	For Iterator = 1 To 10 Step 1
+ 	For Iterator = 1 To 2 Step 1
  	
- 		tipodoc			= "DNI"
+ 		tipodoc			= "DOC. NACIONAL DE IDENTIDAD"
  		numdoc 			= 44394190
  		participacion	= 0.001
  		
@@ -62,8 +70,11 @@ Function Fun_NuevoParticipador(num_participantes)
  End Function
  
  Function Fun_MostrarMenu 
+ 	
 	For Iterator = 1 To 15 Step 1
 		Set shell = CreateObject("Wscript.Shell")
 			shell.SendKeys "{PGUP}"
 	Next
 End Function
+
+
